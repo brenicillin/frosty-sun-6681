@@ -6,4 +6,14 @@ class Doctor < ApplicationRecord
   def find_hospital
     hospital.name
   end
+
+  def patient_count
+    patients.size
+  end
+
+  def self.sort_by_patients
+    joins(:doctor_patients)
+    .group(:id)
+    .order(Arel.sql('COUNT(doctor_patients.doctor_id) DESC'))
+  end
 end
