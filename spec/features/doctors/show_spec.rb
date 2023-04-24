@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Doctor Show Page' do
-  before(:all) do
+  before(:each) do
     @hospital = Hospital.create!(name: 'Princeton-Plainsboro Teaching Hospital')
     @doctor = @hospital.doctors.create!(name: 'Gregory House', specialty: 'Diagnostic Medicine', university: 'Johns Hopkins University')
     @doctor_2 = @hospital.doctors.create!(name: 'Bob Kelso', specialty: 'General Medicine', university: 'Harvard University')

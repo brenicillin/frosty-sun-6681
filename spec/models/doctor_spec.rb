@@ -5,7 +5,7 @@ RSpec.describe Doctor do
   it {should have_many :doctor_patients}
   it {should have_many(:patients).through(:doctor_patients)}
 
-  before(:all) do 
+  before(:each) do 
     @hospital = Hospital.create!(name: 'Princeton-Plainsboro Teaching Hospital')
     @doctor = @hospital.doctors.create!(name: 'Gregory House', specialty: 'Diagnostic Medicine', university: 'Johns Hopkins University')
   end
