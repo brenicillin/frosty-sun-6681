@@ -6,8 +6,4 @@ class Doctor < ApplicationRecord
   def find_hospital
     hospital.name
   end
-
-  def list_patients
-    patients.pluck(:name).join(', ')
-  end
 end
