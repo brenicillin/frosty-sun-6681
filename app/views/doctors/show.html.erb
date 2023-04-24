@@ -1,0 +1,19 @@
+<h1>Dr <%= @doctor.name %></h1>
+
+<body>
+  <section id="doctor-info">
+    <h2>Doctor Info</h2>
+    <p>Specialty: <%= @doctor.specialty %></p>
+    <p>Graduated from: <%= @doctor.university %></p>
+  </section>
+
+  <section id="hospital-info">
+    <h2>Hospital</h2>
+    <%= @doctor.find_hospital %>
+  </section>
+
+  <section id="patients">
+    <h2>Patients</h2>
+    <%= @doctor.list_patients %>
+  </section>
+</body>
