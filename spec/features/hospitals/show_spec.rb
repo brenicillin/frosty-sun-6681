@@ -18,7 +18,7 @@ RSpec.describe 'Hospital Show Page' do
   describe 'Extension' do
     it 'I see the hospitals name' do
       visit hospital_path(@hospital_1)
-      save_and_open_page
+      
       expect(page).to have_content(@hospital_1.name)
     end
 
