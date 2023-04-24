@@ -1,0 +1,11 @@
+<h1><%= @hospital.name %></h1>
+
+<body>
+  <section id="doctors">
+    <h2>Doctors</h2>
+    <% @doctors.each do |doctor| %>
+        <h3><%= doctor.name %></h3>
+        <p><%= doctor.patient_count %> patients</p>
+    <% end %>
+  </section>
+</body>
